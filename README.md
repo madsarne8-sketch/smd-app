@@ -2,7 +2,7 @@
 
 Reference version of `ledger`, the application built step by step in the labs of **Software Management & Development** (IE University, MFT & MCSDI). The labs and notes are at [ami232/ie-smd](https://github.com/ami232/ie-smd).
 
-Personal finance ledger: balances, spending and monthly reports from a CSV file.
+Personal finance ledger for the command line, designed to manage income and expenses.
 
 ## Versions
 
