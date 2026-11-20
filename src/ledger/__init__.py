@@ -4,7 +4,8 @@ import argparse
 import csv
 from collections import defaultdict
 from decimal import Decimal
-
+from rich.console import Console
+from rich.table import Table
 
 def read_transactions(path):
     """Reads the CSV file and returns one dict per row, with the amount as a Decimal."""
@@ -35,5 +36,9 @@ def main() -> None:
             print(f"{account:<10} {total:>10}")
     else:
         spending = [t for t in transactions if t["amount"] < 0 and t["category"] != "transfer"]
+                table = Table(title="Spending by category")
+        table.add_column("Category")
+        table.add_column("EUR", justify="right")
         for category, total in sorted(totals_by(spending, "category").items(), key=lambda item: item[1]):
-            print(f"{category:<14} {total:>10}")
+            table.add_row(category, f"{-total:,.2f}")
+        Console().print(table)
