@@ -1,8 +1,8 @@
-# ledger
+Personal finance ledger for the command line: manage income, expenses, balances and spending reports using CSV data.Personal finance ledger for the command line: manage income, expenses, balances and spending reports using CSV data.# ledger
 
 Reference version of `ledger`, the application built step by step in the labs of **Software Management & Development** (IE University, MFT & MCSDI). The labs and notes are at [ami232/ie-smd](https://github.com/ami232/ie-smd).
 
-Personal finance ledger: balances, spending, monthly reports and future improvements using CSV data.
+Personal finance ledger for the command line: manage income, expenses, balances and spending reports using CSV data.
 
 ## Versions
 
