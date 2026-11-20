@@ -2,7 +2,7 @@
 
 Reference version of `ledger`, the application built step by step in the labs of **Software Management & Development** (IE University, MFT & MCSDI). The labs and notes are at [ami232/ie-smd](https://github.com/ami232/ie-smd).
 
-Personal finance ledger: balances, spending and monthly reports from a CSV file.
+Personal finance ledger: balances, spending, monthly reports and future improvements using CSV data.
 
 ## Versions
 
@@ -25,6 +25,7 @@ uv run ledger spending
 - Monthly report of income and spending
 - A database instead of a CSV file
 - A web API and a dashboard
+- Improve error handling for invalid transactions
 
 ## Author
 <madsarne8-sketch>, <mads.myklebust@student.ie.edu>
