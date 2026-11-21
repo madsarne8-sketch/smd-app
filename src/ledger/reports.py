@@ -58,3 +58,14 @@ def spending_by_category(
             key=lambda item: item[1],
         )
     }
+
+
+def net_by_month(
+    transactions: Iterable[Transaction],
+) -> dict[str, Decimal]:
+    """Calculate the net change for each month, sorted chronologically."""
+    totals = totals_by(
+        transactions,
+        key=lambda t: t.date.strftime("%Y-%m"),
+    )
+    return dict(sorted(totals.items()))

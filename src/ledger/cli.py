@@ -38,7 +38,7 @@ def main() -> None:
     )
     parser.add_argument(
         "command",
-        choices=["balance", "spending"],
+        choices=["balance", "spending", "months"],
     )
     parser.add_argument(
         "file",
@@ -54,3 +54,5 @@ def main() -> None:
         print_totals(reports.balances(transactions))
     elif args.command == "spending":
         print_spending(reports.spending_by_category(transactions))
+    elif args.command == "months":
+        print_totals(reports.net_by_month(transactions))
