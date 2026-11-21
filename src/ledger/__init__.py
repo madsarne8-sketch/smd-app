@@ -36,7 +36,7 @@ def main() -> None:
             print(f"{account:<10} {total:>10}")
     else:
         spending = [t for t in transactions if t["amount"] < 0 and t["category"] != "transfer"]
-                table = Table(title="Spending by category")
+        table = Table(title="Spending by category")
         table.add_column("Category")
         table.add_column("EUR", justify="right")
         for category, total in sorted(totals_by(spending, "category").items(), key=lambda item: item[1]):
