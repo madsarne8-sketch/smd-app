@@ -42,9 +42,7 @@ def spending_by_category(
     transactions: Iterable[Transaction],
 ) -> dict[str, Decimal]:
     """Calculate spending by category as positive amounts."""
-    spending = [
-        t for t in transactions if is_spending(t)
-    ]
+    spending = [t for t in transactions if is_spending(t)]
 
     totals = totals_by(
         spending,
